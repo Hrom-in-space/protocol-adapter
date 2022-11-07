@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ../../
+      dockerfile: ./devops/build/common.dockerfile
+    ports:
+      - "50051:50051"
+      - "50052:50052"

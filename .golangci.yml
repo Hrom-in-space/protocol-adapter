@@ -1,0 +1,73 @@
+# This file contains all available configuration options
+# with their default values.
+run:
+  # default concurrency is a available CPU number
+  concurrency: 4
+  # timeout for analysis, e.g. 30s, 5m, default is 1m
+  timeout: 5m
+
+linters:
+  #  # please, do not use `enable-all`: it's deprecated and will be removed soon.
+  #  # inverted configuration with `enable-all` and `disable` is not scalable during updates of golangci-lint
+  disable-all: false
+  enable:
+    - deadcode
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - structcheck
+    - typecheck
+    - unused
+    - varcheck
+    - asciicheck
+    - bodyclose
+    - depguard
+    - dogsled
+    - dupl
+#    - exhaustive - не понимает работу с default
+    - exportloopref
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gocyclo
+    - godot
+    - gofmt
+#    - gofumpt - поломан напрочь. ругается на предварительно отформатированный код. Сам форматирует как попало
+    - goheader
+    - goimports
+    #    - golint
+    - gomodguard
+    - goprintffuncname
+    - misspell
+    - nakedret
+    - nestif
+    - nlreturn
+    - nolintlint
+    - prealloc
+    - rowserrcheck
+    - sqlclosecheck
+    - stylecheck
+    - unconvert
+    - unparam
+    - whitespace
+  disable:
+    - noctx
+    - funlen
+    - gci
+    - gochecknoglobals
+    - godox
+    - goerr113
+    - gocognit
+    - gomnd
+    - gosec
+    - interfacer
+    - lll
+    - maligned
+    - scopelint
+    - testpackage
+    - wsl
+
+issues:
+  max-same-issues: 0
